@@ -6,7 +6,7 @@
 
 The toolbar shows a few key stats out of the box.  If you're using express as a backend, you'll 
 automatically get the request time (`req`) and response time (`res`).  This one is probably less
-helpful, but it's there.
+helpful, but it's there.  Also included by default is the currently checked out git branch.
 
 ## Usage
 
