@@ -22,6 +22,8 @@ export default {
   after: {
     width: 0,
     height: 0,
+    top: 0,
+    right: '-22px',
     position: 'absolute',
     borderTop: '11px solid transparent',
     borderLeft: '11px solid rgba(0,0,0,0.7)',
