@@ -10,6 +10,10 @@ helpful, but it's there.  Also included by default is the currently checked out 
 
 ## Usage
 
+### Getting Started
+
+Install with `yarn add dev-bar` or `npm install --save dev-bar`.
+
 ### React
 
 Import the component, and add it to your root component.  It can go anywhere, but inside `App` is probably more semantic.
