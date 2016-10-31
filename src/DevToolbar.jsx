@@ -17,19 +17,23 @@ export default class Developer extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
-    this.socket = io(`http://localhost:${this.props.port || 3001}`);
+    let url = `http://localhost:${this.props.port || 3001}`;
+    if (props.url) {
+      url = props.url;
+    }
+    this.socket = io(url);
     this.socket.on('devUpdate', update => this.updateDetails(update));
     fetch('/'); // trigger the socket to send
   }
 
   getDevPieces() {
     if (Object.keys(this.state).length === 0) {
-      return (<button styles={styles.piece} onClick={() => fetch('/')}>Load initial data</button>);
+      return (<button style={styles.piece} onClick={() => fetch('/')}>Load initial data</button>);
     }
     return Object.entries(this.state).map(([key, value], i) =>
-      <div key={i} styles={styles.piece}>
-        <span key={1} styles={styles.key}>{key}: </span>
-        <span key={2} styles={styles.value}>{getValue(value)}</span>
+      <div key={i} style={styles.piece}>
+        <span key={1} style={styles.key}>{key}: </span>
+        <span key={2} style={styles.value}>{getValue(value)}</span>
       </div>
     );
   }
@@ -40,10 +44,10 @@ export default class Developer extends PureComponent {
 
   render() {
     return (
-      <div styles={styles.toolbar}>
-        <div styles={styles.before} />
+      <div style={styles.toolbar}>
+        <div style={styles.before} />
         {this.getDevPieces()}
-        <div styles={styles.after} />
+        <div style={styles.after} />
       </div>
     );
   }
@@ -52,4 +56,5 @@ export default class Developer extends PureComponent {
 Developer.propTypes = {
   devDetails: PropTypes.object, // eslint-disable-line
   port: PropTypes.number,
+  url: PropTypes.string,
 };

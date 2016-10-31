@@ -66,8 +66,10 @@ This will add `loggedIn: true / apiVersion: 2` to your toolbar.  Any values that
 You can use whatever backend you like, but you'll need to implement the socket connection yourself.
 The default port is 3001. If you want a different port, pass in a `port` prop to the Toolbar component.  You just need to emit an object under 'devUpdate'.  Each key in the object will become a key in the toolbar.  Keep it light.
 
-To bind your socket to a different port:
+To bind your socket to a different port, i.e. `http://localhost:8080`:
 ```jsx
 // import the DevToolbar component
 <DevToolbar port={8080} />
 ```
+
+Alternatively, if you want to specify a different URL completely, pass in the `url` prop.  Note: this will override the port, if any is passed in.
