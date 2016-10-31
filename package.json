@@ -1,0 +1,38 @@
+{
+  "name": "dev-bar",
+  "version": "0.0.1",
+  "description": "A toolbar at the bottom of your React apps with useful information.",
+  "main": "dist/index.js",
+  "author": "David Buchan-Swanson <david.buchanswanson@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src",
+    "build": "webpack --config webpack.config.babel.js"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "on-finished": "^2.3.0",
+    "on-headers": "^1.0.1",
+    "react": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "socket.io": "^1.5.1",
+    "socket.io-client": "^1.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "eslint": "^3.9.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-loader": "^1.6.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "redux": "^3.6.0",
+    "webpack": "^1.13.3"
+  }
+}
